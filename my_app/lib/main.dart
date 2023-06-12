@@ -24,10 +24,11 @@ class MyApp extends StatelessWidget {
                   ))),
         ),
         body: Center(
-          child: Image(
-              image: NetworkImage(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxmMZDv5WLTqjiBl7P5Cr_a_lRbsO0lQ2v-A&usqp=CAU')),
-        ),
+            child: Image(
+                image:
+                    //       NetworkImage(
+                    //           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxmMZDv5WLTqjiBl7P5Cr_a_lRbsO0lQ2v-A&usqp=CAU')
+                    AssetImage('Images/luffy.png'))),
       ),
     );
   }
