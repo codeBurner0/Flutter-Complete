@@ -5,27 +5,30 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: Title(
-                  color: Color.fromARGB(255, 242, 10, 10),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.blueGrey,
+        appBar: AppBar(
+          backgroundColor: Colors.blueGrey[900],
+          title: Center(
+              child: Title(
+                  color: Color.fromARGB(255, 220, 231, 236),
                   child: Text(
-                    'Hello World',
-                    style: TextStyle(
-                        color: Colors.red,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40),
-                  )),
-            ),
-            body: Center(
-              child: Text(
-                "Hello",
-                style: TextStyle(fontSize: 50, color: Colors.red[600]),
-              ),
-            )));
+                    'One Piece',
+                    style: TextStyle(fontSize: 29),
+                  ))),
+        ),
+        body: Center(
+          child: Image(
+              image: NetworkImage(
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxmMZDv5WLTqjiBl7P5Cr_a_lRbsO0lQ2v-A&usqp=CAU')),
+        ),
+      ),
+    );
   }
 }
